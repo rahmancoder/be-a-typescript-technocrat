@@ -14,3 +14,4 @@ type RichPeoplesVehicle = {
 type CheckVehicle<T> = T extends keyof RichPeoplesVehicle ? true : false;
 
 type HasBike = CheckVehicle<"tractor">;
+// console.log(HasBike);
