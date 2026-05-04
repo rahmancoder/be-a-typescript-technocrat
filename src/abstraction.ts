@@ -53,4 +53,6 @@ class MezbaPlayer extends MediaPlayer {
 }
 
 const mezbaPlayer1 = new MezbaPlayer();
+const mezbaPlayer2 = new MezbaPlayer();
 mezbaPlayer1.play();
+mezbaPlayer2.play();
