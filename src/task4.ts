@@ -4,7 +4,7 @@ let secretValue: unknown ="typescript is awesome ";
 
 // let upperValue=secretValue as unknown;
 
-let upperValue=secretValue as string;
+let upperValue=secretValue as string; //type assertion
 
 const result1= upperValue;
 

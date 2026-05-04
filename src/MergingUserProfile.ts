@@ -1,7 +1,7 @@
 type Person = { name: string; age: number };
 type JobDetails = { role: string; salary: number };
 
-type Employee = Person & JobDetails ;
+type Employee = Person & JobDetails ; // type use & and interface use extends to merge
 
 // const getProfile (input:Employee):string => { return "Name : [name] , Role: [role]"};
 
