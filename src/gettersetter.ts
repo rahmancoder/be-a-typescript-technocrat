@@ -1,12 +1,14 @@
 // getter
 // setter
 
-class BankAccount {
+class BankAccount 
+{
   public readonly userId: number;
   public userName: string;
   private _userBalance: number;
 
-  constructor(userId: number, userName: string, userBalance: number) {
+  constructor(userId: number, userName: string, userBalance: number) 
+  {
     this.userId = userId;
     this.userName = userName;
     this._userBalance = userBalance;
@@ -19,7 +21,8 @@ class BankAccount {
 
   // setter use kre krte chai
 
-  set addBalance(amount: number) {
+  set addBalance(amount: number) 
+  {
     this._userBalance = this._userBalance + amount;
   }
 
@@ -30,7 +33,8 @@ class BankAccount {
   //   }
 
   // getter use kore get korte chai
-  get getBalance() {
+  get getBalance() 
+  {
     return this._userBalance;
   }
 }
@@ -47,3 +51,6 @@ mezbaBhaiAccount.addBalance = 60;
 
 console.log(mezbaBhaiAccount.getBalance);
 // console.log(mezbaBhaiAccount);
+
+//output
+//180
