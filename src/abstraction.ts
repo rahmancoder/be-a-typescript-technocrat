@@ -33,26 +33,49 @@
 // MezbaPlayer.play();
 
 //idea
-abstract class MediaPlayer {
+abstract class MediaPlayer 
+{
   abstract play(): void;
   abstract pause(): void;
   abstract stop(): void;
 }
 
 //implementation
-class MezbaPlayer extends MediaPlayer {
-  play() {
+class MezbaPlayer extends MediaPlayer 
+{
+  play() 
+  {
     console.log(`Playing music...`);
   }
-  pause(): void {
+  pause(): void 
+  {
     console.log("Music is paused !");
   }
-  stop(): void {
+  stop(): void 
+  {
+
     console.log("Music is stopped !");
   }
 }
 
 const mezbaPlayer1 = new MezbaPlayer();
 const mezbaPlayer2 = new MezbaPlayer();
+
 mezbaPlayer1.play();
 mezbaPlayer2.play();
+
+mezbaPlayer1.stop();
+mezbaPlayer2.play();
+
+mezbaPlayer1.pause();
+mezbaPlayer2.play();
+
+
+// Output
+
+// Playing music...
+// Playing music...
+// Music is stopped !
+// Playing music...
+// Music is paused !
+// Playing music...
