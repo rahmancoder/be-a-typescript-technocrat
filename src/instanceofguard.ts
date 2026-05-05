@@ -1,53 +1,70 @@
 //oop : instance of type guard/ type narrowing
 
-class Person {
+class Person 
+{
   name: string;
 
-  constructor(name: string) {
+  constructor(name: string) 
+  {
     this.name = name;
   }
 
-  getSleep(numOfhours: number) {
+  getSleep(numOfhours: number) 
+  {
     console.log(`${this.name} doinik ${numOfhours} ghonta ghumai`);
   }
 }
 
-class Student extends Person {
-  constructor(name: string) {
+class Student extends Person 
+{
+  constructor(name: string) 
+  {
     super(name);
   }
 
-  doStudy(numOfhours: number) {
+  doStudy(numOfhours: number) 
+  {
     console.log(`${this.name} doinik ${numOfhours} ghonta study koe`);
   }
 }
 
-class Teacher extends Person {
-  constructor(name: string) {
+class Teacher extends Person 
+{
+  constructor(name: string) 
+  {
     super(name);
   }
 
-  takeClass(numOfhours: number) {
+  takeClass(numOfhours: number) 
+  {
     console.log(`${this.name} doinik ${numOfhours} ghonta class nei`);
   }
 }
 
 // function guard
 
-const isStudent = (user: Person) => {
+const isStudent = (user: Person) => 
+{
   return user instanceof Student; // user is Student
 };
 
-const isTeacher = (user: Person) => {
+const isTeacher = (user: Person) => 
+{
   return user instanceof Teacher; // user is Teacher
 };
 
-const getUserInfo = (user: Person) => {
-  if (isStudent(user)) {
+const getUserInfo = (user: Person) => 
+  {
+  if (isStudent(user)) 
+  {
     user.doStudy(10);
-  } else if (isTeacher(user)) {
+  } 
+  else if (isTeacher(user)) 
+  {
     user.takeClass(5);
-  } else {
+  } 
+  else 
+  {
     user.getSleep(15);
   }
 };
@@ -57,3 +74,14 @@ const teacher1 = new Teacher("Mr. teacher");
 const person1 = new Person("Mr. Person");
 
 getUserInfo(person1);
+
+getUserInfo(teacher1);
+
+getUserInfo(student1);
+
+
+
+// Output 
+// Mr. Person doinik 15 ghonta ghumai
+// Mr. teacher doinik 5 ghonta class nei
+// Mr. student doinik 10 ghonta study koe
