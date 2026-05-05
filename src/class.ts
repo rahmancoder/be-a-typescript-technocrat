@@ -20,11 +20,19 @@
 //patrameter properties
 
 class Animal {
-  constructor(public name: string, public species: string, public sound: string) {
-   
-  }
 
-  makeSound() {
+  constructor(
+    public name: string, 
+    public species: string,
+     public sound: string) 
+     {
+      this.name=name;
+      this.species=species;
+      this.sound=sound;
+     }
+
+  makeSound() 
+  {
     console.log(`${this.name} is making  sound: ${this.sound}`);
   }
 }
@@ -34,10 +42,10 @@ const dog = new Animal("dogesh bhai", "dog", "Ghew ghew");
 
 // const cat = new Animal("Cat bhai", "Cat", "mewa meaw");
 
-dog.;
+// dog.makeSound();
 
 // function add (num1: number,num2:number){
 
-// }
+// }n
 
 // add (2,3)
